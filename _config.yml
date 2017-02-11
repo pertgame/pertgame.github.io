@@ -1,0 +1,7 @@
+permalink: /:year/:month/:title/
+url: pertgame.gitgub.io
+author: thunder
+highlighter: rouge
+timezone: Asia/Shanghai
+gems: [jekyll-paginate]
+paginate: 24
