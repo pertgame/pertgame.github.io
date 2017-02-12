@@ -5,7 +5,7 @@ baseurl:
 url: pertgame.github.io
 date_format: "ordinal"
 title: code more
-subtitle: "code less"
+subtitle: ""
 description: "zack's blog"
 keywords: pertgame
 favicon: /favicon.ico
@@ -34,13 +34,13 @@ navs:
     href: /categories/
     label: 分类
 
-  -
-    href: /wiki/
-    label: 维基
+#  -
+ #   href: /wiki/
+ #   label: 维基
 
-  -
-    href: /links/
-    label: 链接
+#  -
+ #   href: /links/
+ #   label: 链接
 
   -
     href: /about/
@@ -49,7 +49,7 @@ navs:
 # ---------------- #
 #       RSS        #
 # ---------------- #
-subscribe_rss: /feed.xml
+subscribe_rss: 
 
 # ---------------- #
 #      Jekyll      #
