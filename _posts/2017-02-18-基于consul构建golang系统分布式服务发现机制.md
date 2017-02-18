@@ -24,9 +24,9 @@ category: golang
 
 #### consul相关资源
 
-可执行程序下载地址：https://www.consul.io/downloads.html
-官方说明文档: https://www.consul.io/docs/index.html
-api说明文档： https://godoc.org/github.com/hashicorp/consul/api#pkg-index
+可执行程序下载地址： https://www.consul.io/downloads.html
+官方说明文档：      https://www.consul.io/docs/index.html
+api说明文档：       https://godoc.org/github.com/hashicorp/consul/api#pkg-index
 golang api代码位置：github.com/hashicorp/consul/api
 
 linux系统中，下载consul可执行程序后直接拷贝到/usr/local/bin就可以使用了，无需其他额外配置。
