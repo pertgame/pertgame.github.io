@@ -37,13 +37,13 @@ linux系统中，下载consul可执行程序后直接拷贝到/usr/local/bin就�
 
 参数说明：
 	
-	-server 表示以server节点模式启动consul
-	-bootstrap-expect 1 表示期待的server节点一共有几个，如3个server集群模式
-	-data-dir consul存储数据的目录
-	-node 节点的名字
-	-bind 绑定的服务ip
-	-client 0.0.0.0 -ui 启动Web UI管理工具
-	-config-dir 指定服务配置文件的目录（这个目录下的所有.json文件，作为服务配置文件读取）
+- -server 表示以server节点模式启动consul
+- -bootstrap-expect 1 表示期待的server节点一共有几个，如3个server集群模式
+- -data-dir consul存储数据的目录
+- -node 节点的名字
+- -bind 绑定的服务ip
+- -client 0.0.0.0 -ui 启动Web UI管理工具
+- -config-dir 指定服务配置文件的目录（这个目录下的所有.json文件，作为服务配置文件读取）
 
 #### consul服务发现机制测试
 为了测试consul服务治理方式，设定如下场景：
@@ -52,12 +52,12 @@ linux系统中，下载consul可执行程序后直接拷贝到/usr/local/bin就�
 	
 做如下规则设定准备：
 
-	manager和worker都需要向consul注册自己的服务，让对方发现自己的服务地址（ip和端口）
-	采用consul的key-value存储机制，worker周期性更新自己的负载信息到相应的key；manger从worker的key中获取负载信息，并同步更新到本地。
-	服务类型规则： manager的服务类型用字符串"manager"表示，各个worker的服务类型采用字符串"worker"表示。
-	服务注册ID规则： 服务类型-服务IP，如 manager-192.168.0.2
-	key的构建规则: 服务类型/IP:Port, 如 worker/192.168.0.2:5400
-	存储的数据采用json格式：{"load":100,"ts":1482828232}
+- manager和worker都需要向consul注册自己的服务，让对方发现自己的服务地址（ip和端口）
+- 采用consul的key-value存储机制，worker周期性更新自己的负载信息到相应的key；manger从worker的key中获取负载信息，并同步更新到本地。
+- 服务类型规则： manager的服务类型用字符串"manager"表示，各个worker的服务类型采用字符串"worker"表示。
+- 服务注册ID规则： 服务类型-服务IP，如 manager-192.168.0.2
+- key的构建规则: 服务类型/IP:Port, 如 worker/192.168.0.2:5400
+- 存储的数据采用json格式：{"load":100,"ts":1482828232}
 
 #### golang测试程序
 
